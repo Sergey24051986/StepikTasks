@@ -1,3 +1,4 @@
+import java.io.File;
 import java.util.*;
 
 public class Calculator {
@@ -5,7 +6,7 @@ public class Calculator {
     Calculator() {
 
         try {
-            Scanner in = new Scanner(System.in);
+            Scanner in = new Scanner(new File("Calculator/input.txt"));
             int num1 = in.nextInt();
             String operator = in.next();
             int num2 = in.nextInt();
