@@ -1,12 +1,14 @@
-import java.io.File;
+import java.io.*;
 import java.util.*;
 
 public class Calculator {
 
-    Calculator() {
+    Calculator() throws IOException {
+
+        Scanner in = new Scanner(new File("Calculator/input.txt"));
+        PrintWriter writer = new PrintWriter("Calculator/output.txt");
 
         try {
-            Scanner in = new Scanner(new File("Calculator/input.txt"));
             int num1 = in.nextInt();
             String operator = in.next();
             int num2 = in.nextInt();
@@ -16,27 +18,29 @@ public class Calculator {
             }
 
             if (operator.equals("+")) {
-                System.out.println(num1 + num2);
+                writer.print(num1 + num2);
             } else if (operator.equals("-")) {
-                System.out.println(num1 - num2);
+                writer.print(num1 - num2);
             } else if (operator.equals("*")) {
-                System.out.println(num1 * num2);
+                writer.print(num1 * num2);
             } else if (operator.equals("/")) {
-                System.out.println(num1 / num2);
+                writer.print(num1 / num2);
             }
 
-        } catch(InputMismatchException e) {
-            System.out.println("Error! Not number");
-        } catch(ArithmeticException e) {
-            System.out.println("Error! Division by zero");
+        } catch (InputMismatchException e) {
+            writer.print("Error! Not number");
+        } catch (ArithmeticException e) {
+            writer.print("Error! Division by zero");
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            writer.print(e.getMessage());
         }
+
+        in.close();
+        writer.close();
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         new Calculator();
-
     }
 }
