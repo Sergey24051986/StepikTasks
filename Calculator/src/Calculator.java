@@ -8,36 +8,40 @@ public class Calculator {
         Scanner in = new Scanner(new File("Calculator/input.txt"));
         PrintWriter writer = new PrintWriter("Calculator/output.txt");
 
-        try {
-            int num1 = in.nextInt();
-            String operator = in.next();
-            int num2 = in.nextInt();
+        while (in.hasNext()) {
+            String str = in.nextLine();
+            String[] arr = str.split(" ");
 
-            if (!operator.matches("[*/+-]")) {
-                throw new Exception("Operation Error!");
+            try {
+                double num1 = Integer.parseInt(arr[0]);
+                String operator = arr[1];
+                if (!operator.matches("[*/+-]")) {
+                    throw new Exception(str + " = Operation Error!");
+                }
+                double num2 = Integer.parseInt(arr[2]);
+
+                if (operator.equals("/") & num2 == 0) {
+                    throw new Exception(str + " = Error! Division by zero");
+                }
+
+                if (operator.equals("+")) {
+                    writer.println(str + " = " + (num1 + num2));
+                } else if (operator.equals("-")) {
+                    writer.println(str + " = " + (num1 - num2));
+                } else if (operator.equals("*")) {
+                    writer.println(str + " = " + (num1 * num2));
+                } else if (operator.equals("/")) {
+                    writer.println(str + " = " + (num1 / num2));
+                }
+
+            } catch (NumberFormatException e) {
+                writer.println(str + " = Error! Not number");
+            } catch (Exception e) {
+                writer.println(e.getMessage());
             }
-
-            if (operator.equals("+")) {
-                writer.print(num1 + num2);
-            } else if (operator.equals("-")) {
-                writer.print(num1 - num2);
-            } else if (operator.equals("*")) {
-                writer.print(num1 * num2);
-            } else if (operator.equals("/")) {
-                writer.print(num1 / num2);
-            }
-
-        } catch (InputMismatchException e) {
-            writer.print("Error! Not number");
-        } catch (ArithmeticException e) {
-            writer.print("Error! Division by zero");
-        } catch (Exception e) {
-            writer.print(e.getMessage());
         }
-
         in.close();
         writer.close();
-
     }
 
     public static void main(String[] args) throws IOException {
