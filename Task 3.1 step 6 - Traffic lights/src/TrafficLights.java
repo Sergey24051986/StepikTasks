@@ -75,6 +75,6 @@ public class TrafficLights extends Canvas {
         frame.setResizable(false);
         frame.setVisible(true);
         //Для записи в файл
-        //ImageIO.write(img, "png", new File("TrafficLights/Image/TrafficLights.png"));
+        //ImageIO.write(img, "png", new File("Task 3.1 step 6 - Traffic lights/Image/TrafficLights.png"));
     }
 }
