@@ -1,0 +1,7 @@
+23 + 42 = 65.0
+14 - f = Error! Not number
+15 / 0 = Error! Division by zero
+45 * 2 = 90.0
+6 y 5 = Operation Error!
+t t t = Error! Not number
+6 t u = Operation Error!
