@@ -1,3 +1,4 @@
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ComponentAdapter;
@@ -5,6 +6,8 @@ import java.awt.event.ComponentEvent;
 import java.awt.geom.Path2D;
 import java.awt.geom.QuadCurve2D;
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 public class Car extends JComponent {
 
@@ -17,7 +20,7 @@ public class Car extends JComponent {
         g.drawImage(img, 0, 0, width, height, null); // рисует в окне с текущими размерами
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         f = new JFrame("Car");
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setSize(1100,600);
@@ -27,7 +30,7 @@ public class Car extends JComponent {
         // При изменении размеров экрана масштабирует рисунок под новый размер
         f.addComponentListener(new Resizes());
         // Если нужно записать в файл
-        //ImageIO.write(img,"png",new File("Car/Image/Car.png"));
+        ImageIO.write(img,"png",new File("Task 3.1 step 8 - Car/Image/Car.png"));
     }
 
     public static void paintCar() { // Рисует в img рисунок
