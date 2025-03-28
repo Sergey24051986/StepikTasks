@@ -6,38 +6,8 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class Picture extends JComponent {
-    private static BufferedImage img;
-    private int pX = -200,  pY = -200;
-
-    public Picture() throws IOException {
-        img = ImageIO.read(new File("DirectLine/Image/Rocket.png"));
-        setSize(img.getWidth(), img.getHeight());
-    }
-
-    @Override
-    protected void paintComponent(Graphics g) {
-        g.drawImage(img, 0, 0, null);
-    }
-
-    public int getPX() {
-        return pX;
-    }
-
-    public int getPY() {
-        return pY;
-    }
-
-    public void setPX(int newRX) {
-        pX = newRX;
-    }
-
-    public void setPY(int newRY) {
-        pY = newRY;
-    }
-
-    // Метод для рисования изображения в img
-    public static void paintRocket() throws IOException {
+public class Rocket {
+    public Rocket() throws IOException {
         BufferedImage RocketImg = new BufferedImage(500,500,BufferedImage.TYPE_INT_ARGB);
         Graphics2D g2D = RocketImg.createGraphics();
         g2D.setBackground(Color.black); // Цвет фона
@@ -111,10 +81,24 @@ public class Picture extends JComponent {
         g2D.fillRect(390,275,20,150);
         g2D.dispose();
         // Запись в файл в уменьшённый буфер
-//        BufferedImage imgCopy = new BufferedImage(250, 250, BufferedImage.TYPE_INT_ARGB);
-//        var g2 = imgCopy.createGraphics();
-//        g2.drawImage(RocketImg, 0, 0, 250, 250, null);
-//        ImageIO.write(imgCopy, "png", new File("DirectLine/Image/Rocket.png"));
+        BufferedImage finalSize = new BufferedImage(250, 250, BufferedImage.TYPE_INT_ARGB);
+        var finalSizeG2 = finalSize.createGraphics();
+        finalSizeG2.drawImage(RocketImg, 0, 0, 250, 250, null);
+        ImageIO.write(finalSize, "png", new File("Task 3.2 step 4 - Direct/Image/Rocket.png"));
+    }
+
+
+    public static void main(String[] args) {
+
+        SwingUtilities.invokeLater(() ->
+        {
+            try {
+                new Rocket();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+
+        });
     }
 
 }
