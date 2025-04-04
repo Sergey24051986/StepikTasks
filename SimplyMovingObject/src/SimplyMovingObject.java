@@ -44,7 +44,7 @@ public class SimplyMovingObject extends JFrame{
         private int shiftX;
         private int shiftY;
 
-        Component(int mode) {
+        public Component(int mode) {
             setSize(200, 200);
             setName("Component");
             color = new Color(new Random().nextInt(255), new Random().nextInt(255), new Random().nextInt(255));
@@ -186,7 +186,6 @@ public class SimplyMovingObject extends JFrame{
 
         @Override
         protected void paintComponent(Graphics g) {
-            //g.setFont(new Font("", Font.ITALIC, 10));
             Graphics2D g2D = (Graphics2D) g;
             g2D.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
             g2D.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);

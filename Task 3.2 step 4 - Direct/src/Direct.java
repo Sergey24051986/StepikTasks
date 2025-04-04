@@ -7,8 +7,8 @@ import java.io.IOException;
 
 public class Direct extends JFrame implements Runnable {
     private final BufferedImage img;
-    private int x = -200;
-    private int y = -200;
+    private double x = -200;
+    private double y = -200;
     private final Picture picture;
     public Direct() throws IOException {
         super("Task 3.2 step 4 - Direct");
@@ -40,16 +40,16 @@ public class Direct extends JFrame implements Runnable {
 
     public void run () {
         while (true) {
-            picture.setBounds(x, y, picture.getWidth(), picture.getHeight());
-            x += 1;
-            y += 1;
+            picture.setBounds((int)x, (int)y, picture.getWidth(), picture.getHeight());
+            x += 0.3;
+            y += 0.3;
 
             if (x > getWidth() | y > getHeight()) {
                x = -200;
                y = -200;
             }
             try {
-                Thread.sleep(5);
+                Thread.sleep(1);
             } catch (InterruptedException e) {
                 System.out.print(e);
             }
