@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
@@ -13,10 +14,11 @@ public class TrickierMovement extends JFrame{
         super("TrickierMovement");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(width, height);
+
         setResizable(false);
         setLayout(null);
 
-        img = new JLabel(new ImageIcon("TrickierMovement/Image/Smile.png"));
+        img = new JLabel(new ImageIcon("Task 3.3 step 5 - TrickierMovement/Image/Smile.png"));
         img.setBounds(x, y, 50, 50);
         add(img);
 
@@ -30,23 +32,21 @@ public class TrickierMovement extends JFrame{
         SwingUtilities.invokeLater(TrickierMovement::new);
     }
 
-
     static class ImageMove extends KeyAdapter {
-
         @Override
         public void keyPressed(KeyEvent e) {
             switch (e.getKeyCode()) {
                 case 37:
-                    x -= x - 50 < 0 ? -(width - 50) : 50;
+                    x -= x - 50 < 0 ? -(width - 65) : 50;
                     break;
                 case 38:
-                    y -= y - 50 < 0 ? -(height - 50) : 50;
+                    y -= y - 50 < 0 ? -(height - 90) : 50;
                     break;
                 case 39:
-                    x += x + 50 > width - 50 ? -(width - 50) : 50;
+                    x += x + 50 > width - 50 ? -x : 50;
                     break;
                 case 40:
-                    y += y + 50 > height - 50 ? -(height - 50) : 50;
+                    y += y + 50 > height - 50 ? -y : 50;
                     break;
             }
             img.setBounds(x, y, img.getWidth(), img.getHeight());
