@@ -2,21 +2,22 @@ import javax.swing.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-public class EasyMovement2 extends JFrame{
+// С использованием JLabel
+public class SimpleMovementV2 extends JFrame{
     private static final int width = 1015;
     private static final int height = 990;
     private static int x = 0;
     private static int y = 0;
     private static JLabel img;
 
-    public EasyMovement2() {
-        super("EasyMovement2");
+    public SimpleMovementV2() {
+        super("SimpleMovementV2");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(width, height);
         setResizable(false);
         setLayout(null);
 
-        img = new JLabel(new ImageIcon("EasyMovement/Image/Smile.png"));
+        img = new JLabel(new ImageIcon("Task 3.3 step 4 - SimpleMovement/Image/Smile.png"));
         img.setBounds(x, y, 50, 50);
         add(img);
 
@@ -27,12 +28,10 @@ public class EasyMovement2 extends JFrame{
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(EasyMovement2::new);
+        SwingUtilities.invokeLater(SimpleMovementV2::new);
     }
 
-
     static class ImageMove extends KeyAdapter {
-
         @Override
         public void keyReleased(KeyEvent e) {
             switch (e.getKeyCode()) {
