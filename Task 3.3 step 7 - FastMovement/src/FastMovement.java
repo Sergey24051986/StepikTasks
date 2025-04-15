@@ -16,7 +16,7 @@ public class FastMovement extends JFrame{
         setResizable(false);
         setLayout(null);
 
-        img = new JLabel(new ImageIcon("FastMovement/Image/Smile.png"));
+        img = new JLabel(new ImageIcon("Task 3.3 step 7 - FastMovement/Image/Smile.png"));
         img.setBounds(x, y, 50, 50);
         add(img);
 
@@ -39,16 +39,16 @@ public class FastMovement extends JFrame{
 
             switch (e.getKeyCode()) {
                 case 37:
-                    x -= x - speed < 0 ? -(width - speed) : speed;
+                    x -= x - speed < 0 ? -(width - (e.isShiftDown() ? 65 + 50 : 65)) : speed;
                     break;
                 case 38:
-                    y -= y - speed < 0 ? -(height - speed) : speed;
+                    y -= y - speed < 0 ? -(height - (e.isShiftDown() ? 90 + 50 : 90)) : speed;
                     break;
                 case 39:
-                    x += x + speed > width - speed ? -(width - speed) : speed;
+                    x += x + speed > width - speed ? (e.isShiftDown() & x == width - 115 ? -x : e.isShiftDown() & x == width - 65 ? -x + 50 : -x) : speed ;
                     break;
                 case 40:
-                    y += y + speed > height - speed ? -(height - speed) : speed;
+                    y += y + speed > height - speed ? (e.isShiftDown() & y == height - 140 ? -y : e.isShiftDown() & y == height - 90 ? -y + 50 : -y) : speed;
                     break;
             }
             img.setBounds(x, y, img.getWidth(), img.getHeight());
