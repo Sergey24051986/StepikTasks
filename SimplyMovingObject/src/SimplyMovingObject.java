@@ -48,7 +48,7 @@ public class SimplyMovingObject extends JFrame{
             setSize(200, 200);
             setName("Component");
             color = new Color(new Random().nextInt(255), new Random().nextInt(255), new Random().nextInt(255));
-            Timer timer = new Timer(30, new WaveAction());
+            Timer timer = new Timer(10, new WaveAction());
             timer.start();
             this.mode = mode;
 
