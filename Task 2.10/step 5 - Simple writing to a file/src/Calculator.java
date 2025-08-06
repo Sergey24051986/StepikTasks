@@ -5,8 +5,8 @@ public class Calculator {
 
     Calculator() throws IOException {
 
-        Scanner in = new Scanner(new File("Task 2.10 st1-6 - Calculator/step 5 - Simple writing to a file/input.txt"));
-        PrintWriter writer = new PrintWriter("Task 2.10 st1-6 - Calculator/step 5 - Simple writing to a file/output.txt");
+        Scanner in = new Scanner(new File("Task 2.10/step 5 - Simple writing to a file/input.txt"));
+        PrintWriter writer = new PrintWriter("Task 2.10/step 5 - Simple writing to a file/output.txt");
 
         try {
             int num1 = in.nextInt();

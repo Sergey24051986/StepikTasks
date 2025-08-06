@@ -6,7 +6,7 @@ public class Calculator {
     Calculator() {
 
         try {
-            Scanner in = new Scanner(new File("Task 2.10 st1-6 - Calculator/step 4 - Simple reading from a file/input.txt"));
+            Scanner in = new Scanner(new File("Task 2.10/step 4 - Simple reading from a file/input.txt"));
             int num1 = in.nextInt();
             String operator = in.next();
             int num2 = in.nextInt();
