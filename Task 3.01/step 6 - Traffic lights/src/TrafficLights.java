@@ -1,8 +1,8 @@
-import javax.imageio.ImageIO;
+//import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
+//import java.io.*;
 
 public class TrafficLights extends Canvas {
     private static BufferedImage img;
@@ -75,6 +75,6 @@ public class TrafficLights extends Canvas {
         frame.setResizable(false);
         frame.setVisible(true);
         //Для записи в файл
-        //ImageIO.write(img, "png", new File("Task 3.1 step 6 - Traffic lights/Image/TrafficLights.png"));
+        //ImageIO.write(img, "png", new File("Task 3.01/step 6 - Traffic lights/Image/TrafficLights.png"));
     }
 }

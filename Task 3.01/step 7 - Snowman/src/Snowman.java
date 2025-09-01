@@ -1,9 +1,9 @@
-import javax.imageio.ImageIO;
+//import javax.imageio.ImageIO;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
+//import java.io.IOException;
 
 public class Snowman extends Canvas {
     private static BufferedImage img;
@@ -85,7 +85,7 @@ public class Snowman extends Canvas {
         g2D.drawLine(350,140,450,140);
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
         JFrame frame = new JFrame();
         paintSnowman();
         frame.add(new Snowman());
@@ -94,6 +94,6 @@ public class Snowman extends Canvas {
         frame.setResizable(false);
         frame.setVisible(true);
         //Для записи в файл
-        //ImageIO.write(img, "png", new File("Snowman/Image/Snowman.png"));
+        //ImageIO.write(img, "png", new File("Task 3.01/step 7 - Snowman/Image/Snowman.png"));
     }
 }
