@@ -1,5 +1,4 @@
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
@@ -18,7 +17,7 @@ public class TrickierMovement extends JFrame{
         setResizable(false);
         setLayout(null);
 
-        img = new JLabel(new ImageIcon("Task 3.3 step 5 - TrickierMovement/Image/Smile.png"));
+        img = new JLabel(new ImageIcon("Task 3.03/step 5 - TrickierMovement/Image/Smile.png"));
         img.setBounds(x, y, 50, 50);
         add(img);
 

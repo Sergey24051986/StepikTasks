@@ -15,7 +15,7 @@ public class Repetition extends JFrame {
         setResizable(false);
         setLayout(null);
         this.isSave = isSave;
-        BufferedImage img = ImageIO.read(new File("Task 3.3 step 1 - Repetition/Image/Grass.png"));
+        BufferedImage img = ImageIO.read(new File("Task 3.03/step 1 - Repetition/Image/Grass.png"));
         BufferedImage save = new BufferedImage(800, 600, BufferedImage.TYPE_INT_ARGB);
 
         for (int y = 0; y < getHeight(); y += 50) {
@@ -27,7 +27,7 @@ public class Repetition extends JFrame {
                 g2D.drawImage(img, x, y, null);
             }
         }
-        if (isSave) ImageIO.write(save,"png", new File("Task 3.3 step 1 - Repetition/Image/Repetition.png"));
+        if (isSave) ImageIO.write(save,"png", new File("Task 3.03/step 1 - Repetition/Image/Repetition.png"));
         setVisible(true);
     }
 

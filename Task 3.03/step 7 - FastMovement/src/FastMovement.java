@@ -16,7 +16,7 @@ public class FastMovement extends JFrame{
         setResizable(false);
         setLayout(null);
 
-        img = new JLabel(new ImageIcon("Task 3.3 step 7 - FastMovement/Image/Smile.png"));
+        img = new JLabel(new ImageIcon("Task 3.03/step 7 - FastMovement/Image/Smile.png"));
         img.setBounds(x, y, 50, 50);
         add(img);
 

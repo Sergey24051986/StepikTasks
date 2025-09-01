@@ -20,7 +20,7 @@ public class KeyLogger extends JFrame {
         int width = 640;
         int height = 355;
 
-        writer = new PrintWriter("Task 3.3 step 6 - KeyLogger/Text.txt");
+        writer = new PrintWriter("Task 3.03/step 6 - KeyLogger/Text.txt");
 
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         setBounds(dim.width / 2 - width / 2, dim.height / 2 - height / 2, width, height);
@@ -60,7 +60,7 @@ public class KeyLogger extends JFrame {
         // Установка картинки для фона
         BufferedImage img = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
         Graphics2D g2D = img.createGraphics();
-        g2D.drawImage(ImageIO.read(new File("Task 3.3 step 6 - KeyLogger/Image/Background.jpg")), 0, 0, width, height, null);
+        g2D.drawImage(ImageIO.read(new File("Task 3.03/step 6 - KeyLogger/Image/Background.jpg")), 0, 0, width, height, null);
         JLabel background = new JLabel(new ImageIcon(img));
         background.setBounds(0, 0, width, height);
         add(background);

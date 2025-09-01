@@ -44,7 +44,7 @@ public class SimpleMovementV1 extends JFrame {
         private int y = 0;
 
         public Image() throws IOException {
-            img = ImageIO.read(new File("Task 3.3 step 4 - SimpleMovement/Image/Smile.png"));
+            img = ImageIO.read(new File("Task 3.03/step 4 - SimpleMovement/Image/Smile.png"));
             setSize(img.getWidth(), img.getHeight());
         }
         @Override
