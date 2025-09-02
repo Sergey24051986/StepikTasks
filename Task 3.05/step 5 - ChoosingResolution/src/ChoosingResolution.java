@@ -20,7 +20,7 @@ public class ChoosingResolution {
 
         BufferedImage img = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
         Graphics2D g2D = img.createGraphics();
-        g2D.drawImage(ImageIO.read(new File("Task 3.5 step 5 - ChoosingResolution/Image/ChoosingResolution.jpg")), 0, 0, width, height, null);
+        g2D.drawImage(ImageIO.read(new File("Task 3.05/step 5 - ChoosingResolution/Image/ChoosingResolution.jpg")), 0, 0, width, height, null);
 
         JLabel label = new JLabel(new ImageIcon(img));
         frame.add(label);
