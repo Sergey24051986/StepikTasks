@@ -20,6 +20,7 @@ public class ImageEditor extends JFrame {
     private static int finalHeight = 100;
     private static BufferedImage origImg;
     private static BufferedImage ovalImg;
+    private FinalImage finalImg;
     private static boolean ovalShape = true;
     private static boolean rectangleShape = false;
     private final VisibleArea visibleArea;
@@ -118,6 +119,13 @@ public class ImageEditor extends JFrame {
             repaint();
         });
         buttonSetNewParameters.addActionListener(e -> {
+
+            for (Component c: getContentPane().getComponents()) {
+                if(c.getClass().equals(FinalImage.class))
+                    remove(c);
+                //System.out.println(c.getClass());
+            }
+
             String newFinalWidth = infoFinalWidth.getText();
             String newFinalHeight = infoFinalHeight.getText();
             String newAccuracy = infoAccuracy.getText();
@@ -128,6 +136,11 @@ public class ImageEditor extends JFrame {
             accuracy = Integer.parseInt(newAccuracy);
             widthOfArea = Integer.parseInt(newWidthShape);
             heightOfArea = Integer.parseInt(newHeightShape);
+
+            finalImg = new FinalImage();
+            finalImg.setBounds(getWidth() - finalImg.getWidth() - 30, getHeight() - finalImg.getHeight() - 50, finalImg.getWidth(), finalImg.getHeight());
+            add(finalImg);
+
             repaint();
         });
         buttonSave.addActionListener(e -> {
@@ -355,6 +368,19 @@ public class ImageEditor extends JFrame {
         @Override
         public void componentResized(ComponentEvent e) {
             panel.setBounds(getWidth() - 400,0,400,600);
+        }
+    }
+
+    class FinalImage extends JComponent {
+        public FinalImage() {
+            setSize(finalWidth, finalHeight);
+            shapeImg();
+        }
+
+        @Override
+        protected void paintComponent(Graphics g) {
+            g.drawImage(ovalImg, 0, 0, getWidth(), getHeight(), null);
+            g.drawRect(0, 0, getWidth() - 1, getHeight() - 1);
         }
     }
 }
