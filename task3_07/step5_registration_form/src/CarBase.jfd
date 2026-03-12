@@ -1,0 +1,67 @@
+JFDML JFormDesigner: "9.0" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+				"$layoutConstraints": "insets 0,hidemode 3,gap 5 5"
+				"$columnConstraints": "[fill][fill][fill][fill][fill][fill][fill][fill][fill][fill][fill][fill][fill][fill][fill][fill][fill][fill][fill][fill]"
+				"$rowConstraints": "[fill]"
+			} ) {
+				name: "panel1"
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "addNote"
+					"text": "Добавить запись"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "addNote", true ) )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 1 0"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "open"
+					"text": "Открыть"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "open", true ) )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 17 0"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "edit"
+					"text": "Редактировать"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "edit", true ) )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 18 0"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "removeNote"
+					"text": "Удалить"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "removeNote", true ) )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 19 0"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "South"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "Список зарегестрированных автомобилей"
+				"horizontalAlignment": 0
+				"font": new java.awt.Font( "Inter", 3, 18 )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "North"
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JList" ) {
+					name: "carBaseList"
+					addEvent( new FormEvent( "javax.swing.event.ListSelectionListener", "valueChanged", "carBaeListValueChanged", true ) )
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 705, 300 )
+		} )
+	}
+}

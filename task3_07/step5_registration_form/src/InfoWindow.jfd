@@ -1,0 +1,303 @@
+JFDML JFormDesigner: "9.0" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+				name: "dialogPane"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+					"$layoutConstraints": "insets 10,hidemode 3,gap 10 10"
+					"$columnConstraints": "[fill][fill][fill][fill][fill][fill]"
+					"$rowConstraints": "[][][][][][][][][][][][][][][][][][]"
+				} ) {
+					name: "contentPanel"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "title"
+						"text": "Проверка данных!"
+						"font": new java.awt.Font( "Inter", 3, 16 )
+						"horizontalAlignment": 0
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 0 6 1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label1"
+						"text": "Автомобиль:"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "brand"
+						"font": new java.awt.Font( "Inter", 0, 14 )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 1 4 1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "model"
+						"font": new java.awt.Font( "Inter", 0, 14 )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 1 4 1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label3"
+						"text": "VIN номер:"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 2"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "vin"
+						"font": new java.awt.Font( "Inter", 0, 14 )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 2 4 1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label6"
+						"text": "Год выпуска:"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 3"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "year"
+						"font": new java.awt.Font( "Inter", 0, 14 )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 3 4 1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label8"
+						"text": "Цвет:"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 4"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "color"
+						"font": new java.awt.Font( "Inter", 0, 14 )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 4 4 1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label10"
+						"text": "С пробегом (км):"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 5"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "mileage"
+						"font": new java.awt.Font( "Inter", 0, 14 )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 5 4 1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "generation"
+						"font": new java.awt.Font( "Inter", 0, 14 )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 1 4 1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label18"
+						"text": "Тип кузова:"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 6"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label19"
+						"text": "Положение рулевого колеса:"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 7"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label12"
+						"text": "Характеристики двигателя:"
+						"horizontalAlignment": 0
+						"font": new java.awt.Font( "Inter", 3, 14 )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 8 6 1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label13"
+						"text": "Модель двигателя:"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 9"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "engine"
+						"font": new java.awt.Font( "Inter", 0, 14 )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 9 4 1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label14"
+						"text": "Объемом (cm3):"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 10"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "capacity"
+						"font": new java.awt.Font( "Inter", 0, 14 )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 10 4 1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "config"
+						"font": new java.awt.Font( "Inter", 0, 14 )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 9 4 1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "type"
+						"font": new java.awt.Font( "Inter", 0, 14 )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 9 4 1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "fuel"
+						"font": new java.awt.Font( "Inter", 0, 14 )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 9 4 1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label4"
+						"text": "Экологический класс:"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 11"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "ecoclass"
+						"font": new java.awt.Font( "Inter", 0, 14 )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 11 4 1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label2"
+						"text": "Привод клапанов:"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 12"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "timingBeltDrive"
+						"font": new java.awt.Font( "Inter", 0, 14 )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 12 4 1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "timingType"
+						"font": new java.awt.Font( "Inter", 0, 14 )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 12 4 1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label5"
+						"text": "Мощность (л.с.):"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 13"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "power"
+						"font": new java.awt.Font( "Inter", 0, 14 )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 13 4 1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label7"
+						"text": "Трансмиссия:"
+						"horizontalAlignment": 0
+						"font": new java.awt.Font( "Inter", 3, 14 )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 14 6 1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label9"
+						"text": "Коробка передач:"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 15"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "transmission"
+						"font": new java.awt.Font( "Inter", 0, 14 )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 15 4 1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label11"
+						"text": "Колличество ступеней:"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 16"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "gearsNum"
+						"font": new java.awt.Font( "Inter", 0, 14 )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 16 4 1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label15"
+						"text": "Привод:"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 17"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "drive"
+						"font": new java.awt.Font( "Inter", 0, 14 )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 17 4 1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "bodyType"
+						"font": new java.awt.Font( "Inter", 0, 14 )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 6 4 1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "doorNum"
+						"font": new java.awt.Font( "Inter", 0, 14 )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 6 4 1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label20"
+						"text": "(двер(и/ей))"
+						"font": new java.awt.Font( "Inter", 2, 13 )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 6 4 1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "wheel"
+						"font": new java.awt.Font( "Inter", 0, 14 )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 7 4 1"
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "Center"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+					"$layoutConstraints": "insets dialog,alignx right"
+					"$columnConstraints": "[button,fill][fill]"
+					"$rowSpecs": "[fill]"
+				} ) {
+					name: "buttonBar"
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "okButton"
+						"text": "Подтвердить"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "ok", true ) )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 0"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button1"
+						"text": "Отмена"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1", true ) )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 0"
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "South"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 360, 595 )
+		} )
+	}
+}
