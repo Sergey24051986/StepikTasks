@@ -1,0 +1,71 @@
+JFDML JFormDesigner: "9.0" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.bundleName": "TextEditor"
+	"i18n.autoExternalize": true
+	"i18n.keyPrefix": "TextEditor"
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "textArea"
+					"font": new java.awt.Font( "Calibri", 0, 16 )
+					"lineWrap": true
+					"margin": new java.awt.Insets( 10, 10, 10, 10 )
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+				"axis": 0
+			} ) {
+				name: "mainPanel"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) {
+					"alignment": 0
+					"hgap": 15
+				} ) {
+					name: "leftPanel"
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "openFile"
+						"text": new FormMessage( null, "TextEditor.openFile.text" )
+						"font": new java.awt.Font( "Arial", 0, 20 )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "openFile", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "fileNameTitle"
+						"text": new FormMessage( null, "TextEditor.fileNameTitle.text" )
+						"font": new java.awt.Font( "Inter", 3, 13 )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "fileName"
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) {
+					"alignment": 2
+				} ) {
+					name: "rightPanel"
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "save"
+						"text": new FormMessage( null, "TextEditor.save.text" )
+						"font": new java.awt.Font( "Arial", 0, 20 )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "save", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "saveAs"
+						"text": new FormMessage( null, "TextEditor.saveAs.text" )
+						"font": new java.awt.Font( "Arial", 0, 20 )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "saveAs", true ) )
+					} )
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "North"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 705, 300 )
+		} )
+	}
+}
